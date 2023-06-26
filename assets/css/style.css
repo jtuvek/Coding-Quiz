@@ -1,99 +1,141 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
   }
   
   .container {
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
-  }
-  
-  h1 {
-    font-size: 32px;
-    margin-bottom: 20px;
   }
   
   .hide {
     display: none;
   }
   
-  #timer-container {
-    margin-bottom: 20px;
+  /* Header Styles */
+  h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #007bff;
   }
   
-  #timer {
-    font-size: 20px;
-    font-weight: bold;
-  }
-  
-  #start-btn {
-    padding: 10px 20px;
+  /* Button Styles */
+  button {
+    padding: 12px 24px;
     font-size: 18px;
     background-color: #007bff;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Question Styles */
+  #question-container {
+    margin-top: 40px;
   }
   
   #question {
     font-size: 24px;
     margin-bottom: 20px;
+    color: #333;
   }
   
   #choices {
     list-style-type: none;
-    padding: 10px;
-    margin-top: 10px;
-    text-align: left;
+    padding: 0;
+    margin-bottom: 30px;
   }
   
   #choices li {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
   
-  #choices button {
-    display: block;
-    padding: none;
+  .choice-button {
+    display: inline-block;
+    padding: 10px 20px;
     font-size: 16px;
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #007bff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .choice-button:hover {
     background-color: #007bff;
     color: #fff;
-    border: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 150px;
-    text-align: left;
   }
   
-  
-  #game-over-container form {
+  /* Feedback Styles */
+  #feedback-container {
     margin-top: 20px;
   }
   
-  #game-over-container label {
-    display: block;
+  #feedback {
     font-size: 18px;
+    font-weight: bold;
     margin-bottom: 10px;
+    color: #007bff;
   }
   
-  #game-over-container input[type="text"] {
+  /* Game Over Styles */
+  #game-over-container {
+    margin-top: 40px;
+  }
+  
+  #game-over-container h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #007bff;
+  }
+  
+  #final-score {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  #score-form {
+    margin-top: 30px;
+  }
+  
+  #score-form label {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  #score-form input[type="text"] {
     padding: 8px;
+    width: 60px;
     font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
   }
   
-  #game-over-container button[type="submit"] {
-    padding: 8px 16px;
+  #score-form button {
     font-size: 16px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  }
+  
+  /* High Scores Styles */
+  #high-scores-container {
+    margin-top: 40px;
+  }
+  
+  #high-scores-container h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #007bff;
   }
   
   #high-scores-list {
@@ -102,6 +144,8 @@ body {
   }
   
   #high-scores-list li {
-    font-size: 18px;
     margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
   }
+  
