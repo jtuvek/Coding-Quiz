@@ -17,10 +17,22 @@ body {
     padding: 20px;
   }
   
-  #start-container,
+  #question-container,
   #game-over-container,
   #high-scores-container {
     display: none;
+  }
+  
+  #start-container,
+  #question-container,
+  #game-over-container,
+  #high-scores-container {
+    margin-bottom: 20px;
+  }
+  
+  #start-btn,
+  #score-form button {
+    padding: 10px 20px;
   }
   
   #choices li {
