@@ -46,7 +46,9 @@ body {
   
   #choices {
     list-style-type: none;
-    padding: 0;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: left;
   }
   
   #choices li {
@@ -54,14 +56,18 @@ body {
   }
   
   #choices button {
-    padding: 8px 16px;
+    display: block;
+    padding: none;
     font-size: 16px;
     background-color: #007bff;
     color: #fff;
-    border: none;
+    border: 10px;
     border-radius: 5px;
     cursor: pointer;
+    width: 150px;
+    text-align: left;
   }
+  
   
   #game-over-container form {
     margin-top: 20px;

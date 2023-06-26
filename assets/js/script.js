@@ -104,9 +104,12 @@ function displayQuestion() {
     var choice = currentQuestion.choices[i];
 
     var choiceBtn = document.createElement("button");
-    choiceBtn.textContent = choice;
+    choiceBtn.textContent = i + 1 + ". " + choice;
     choiceBtn.setAttribute("data-index", i);
     choiceBtn.addEventListener("click", checkAnswer);
+
+    var choiceItem = document.createElement("li");
+    choiceItem.appendChild(choiceBtn);
 
     choicesEl.appendChild(choiceBtn);
   }
@@ -179,6 +182,9 @@ function displayHighScores() {
 
     highScoresList.appendChild(li);
   }
+
+  gameOverContainer.classList.add("hide");
+  highScoresContainer.classList.remove("hide");
 }
 
 // Event listener for start button
