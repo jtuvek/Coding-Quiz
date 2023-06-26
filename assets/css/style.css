@@ -1,58 +1,58 @@
 body {
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
   }
   
-  header {
-    text-align: center;
-    padding: 20px;
-    background-color: #f2f2f2;
-  }
-  
   .container {
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 20px;
   }
   
-  #question-container {
-    margin-bottom: 20px;
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  h1 {
+    font-size: 28px;
+  }
+  
+  #start-container,
+  #game-over-container,
+  #high-scores-container {
+    display: none;
+    text-align: center;
+    margin-bottom: 30px;
   }
   
   #question {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   
-  #choices {
+  ul {
     list-style-type: none;
     padding: 0;
   }
   
-  #choices li {
-    margin-bottom: 5px;
+  li {
+    margin-bottom: 10px;
   }
   
-  #score-container, #timer-container, #game-over-container {
-    display: none;
-    margin-bottom: 20px;
+  #score-form {
+    margin-top: 20px;
   }
   
-  #score-form label {
-    margin-right: 5px;
+  #initials {
+    width: 50px;
   }
   
-  #start-btn, #game-over-container button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
+  #high-scores-container {
+    font-size: 18px;
   }
   
-  #start-btn:hover, #game-over-container button:hover {
-    background-color: #45a049;
-  }
-  
-  #start-btn:focus, #game-over-container button:focus {
-    outline: none;
+  #high-scores-list {
+    margin-top: 10px;
   }
   
