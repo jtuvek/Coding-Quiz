@@ -4,41 +4,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Game</title>
   <link rel="stylesheet" href="assets/css/style.css">
-  <title>Coding Quiz</title>
 </head>
 
 <body>
-  <header>
-    <h1>Coding Quiz</h1>
-  </header>
-
-  <main>
+  <div class="container">
+    <h1>Quiz Game</h1>
     <div id="start-container">
-      <p>Test your coding knowledge!</p>
       <button id="start-btn">Start Quiz</button>
     </div>
 
-    <div id="question-container">
+    <div id="question-container" class="hide">
       <h2 id="question"></h2>
       <ul id="choices"></ul>
     </div>
 
-    <div id="game-over-container">
+    <div id="game-over-container" class="hide">
       <h2>Game Over!</h2>
       <form id="score-form">
         <label for="initials">Enter your initials:</label>
-        <input type="text" id="initials" maxlength="3" required>
+        <input type="text" id="initials" name="initials" maxlength="3">
         <button type="submit">Submit</button>
       </form>
     </div>
 
-    <div id="high-scores-container">
+    <div id="high-scores-container" class="hide">
       <h2>High Scores</h2>
       <ul id="high-scores-list"></ul>
     </div>
-  </main>
-
+  </div>
+  
   <script src="assets/js/script.js"></script>
 </body>
 
