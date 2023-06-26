@@ -2,54 +2,54 @@ document.addEventListener('DOMContentLoaded', function() {
     // Quiz questions
     var questions = [
       {
-        question: "What is the output of the following code?\n\nconsole.log(2 + '2');",
-        choices: ["4", "'22'", "22", "NaN"],
-        correctAnswer: 1
+        question: "What is the correct syntax for creating a new JavaScript array?",
+        choices: ["var colors = [];", "var colors = {};", "var colors = ();", "var colors = new Array();"],
+        correctAnswer: 0
       },
       {
-        question: "Which of the following is not a valid JavaScript data type?",
-        choices: ["String", "Number", "Boolean", "Character"],
+        question: "Which of the following is a JavaScript data type?",
+        choices: ["String", "Boolean", "Number", "All of the above"],
         correctAnswer: 3
       },
       {
-        question: "What does HTML stand for?",
-        choices: ["Hyperlinks and Text Markup Language", "Home Tool Markup Language", "Hyper Text Markup Language", "Hyper Tool Markup Language"],
+        question: "What is the purpose of the 'this' keyword in JavaScript?",
+        choices: ["To refer to the current HTML element", "To refer to the current JavaScript file", "To refer to the parent object", "To refer to the global window object"],
         correctAnswer: 2
       },
       {
-        question: "Which JavaScript keyword is used to declare a variable?",
-        choices: ["var", "let", "const", "variable"],
+        question: "Which method is used to remove the last element from an array in JavaScript?",
+        choices: ["pop()", "shift()", "splice()", "slice()"],
         correctAnswer: 0
       },
       {
-        question: "What does CSS stand for?",
-        choices: ["Creative Style Sheets", "Cascading Style Sheets", "Computer Style Sheets", "Colorful Style Sheets"],
+        question: "What does the 'NaN' stand for in JavaScript?",
+        choices: ["Not a Null", "Not a Number", "Not a Name", "Not a NaN"],
         correctAnswer: 1
       },
       {
-        question: "What is the correct syntax for a function named 'myFunction' in JavaScript?",
-        choices: ["function = myFunction()", "function myFunction()", "myFunction = function()", "myFunction() = function"],
+        question: "Which operator is used to compare the equality of two values in JavaScript?",
+        choices: ["==", "===", "=", "!="],
         correctAnswer: 1
       },
       {
-        question: "Which of the following is not a JavaScript framework?",
-        choices: ["React", "Angular", "Vue", "Java"],
-        correctAnswer: 3
+        question: "What is the output of the following code snippet: console.log(1 + '2' - 1);",
+        choices: ["10", "11", "12", "NaN"],
+        correctAnswer: 2
       },
       {
-        question: "What is the purpose of the 'git clone' command?",
-        choices: ["Create a new Git repository", "Add files to the staging area", "Create a branch in Git", "Copy a repository from a remote source"],
-        correctAnswer: 3
+        question: "What is the purpose of the 'addEventListener' method in JavaScript?",
+        choices: ["To remove an event handler", "To add a new event handler", "To trigger an event", "To prevent default behavior"],
+        correctAnswer: 1
       },
       {
-        question: "Which HTML tag is used to define a hyperlink?",
-        choices: ["<a>", "<p>", "<h1>", "<div>"],
+        question: "What does the CSS property 'display: none' do?",
+        choices: ["Hides the element", "Shows the element", "Removes the element", "Disables the element"],
         correctAnswer: 0
       },
       {
-        question: "What does JSON stand for?",
-        choices: ["JavaScript Object Notation", "JavaScript Oriented Notation", "Java Syntax Object Notation", "Java Scripting Object Notation"],
-        correctAnswer: 0
+        question: "Which of the following is NOT a valid CSS selector?",
+        choices: ["#myElement", ".myClass", "$myElement", "input[type='text']"],
+        correctAnswer: 2
       }
     ];
   
@@ -67,6 +67,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var gameOverContainer = document.getElementById("game-over-container");
     var initialsInput = document.getElementById("initials");
     var scoreForm = document.getElementById("score-form");
+    var highScoresContainer = document.getElementById("high-scores-container");
+    var highScoresList = document.getElementById("high-scores-list");
   
     // Start the quiz
     startBtn.addEventListener("click", startQuiz);
@@ -135,6 +137,7 @@ document.addEventListener('DOMContentLoaded', function() {
       gameOverContainer.style.display = "block";
       initialsInput.focus();
       scoreForm.addEventListener("submit", saveScore);
+      showHighScores();
     }
   
     // Save the score
@@ -151,8 +154,24 @@ document.addEventListener('DOMContentLoaded', function() {
         };
         highScores.push(newScore);
         localStorage.setItem("highScores", JSON.stringify(highScores));
-        window.location.href = "highscores.html";
+        showHighScores();
       }
     }
-  });
   
+    // Show the high scores
+    function showHighScores() {
+      highScoresContainer.style.display = "block";
+      highScoresList.innerHTML = "";
+  
+      var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+      highScores.sort(function(a, b) {
+        return b.score - a.score;
+      });
+  
+      for (var i = 0; i < highScores.length; i++) {
+        var scoreItem = document.createElement("li");
+        scoreItem.textContent = highScores[i].initials + " - " + highScores[i].score;
+        highScoresList.appendChild(scoreItem);
+      }
+    }
+  });  
