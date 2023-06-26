@@ -1,46 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coding Quiz</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <title>Coding Quiz</title>
 </head>
 
 <body>
-  <div class="container">
-    <header>
-      <h1>Coding Quiz</h1>
-    </header>
+  <header>
+    <h1>Coding Quiz</h1>
+  </header>
 
-    <main>
-      <div id="start-container">
-        <p>Test your coding knowledge!</p>
-        <button id="start-btn">Start Quiz</button>
-      </div>
+  <main>
+    <div id="start-container">
+      <p>Test your coding knowledge!</p>
+      <button id="start-btn">Start Quiz</button>
+    </div>
 
-      <div id="question-container">
-        <h2 id="question"></h2>
-        <ul id="choices"></ul>
-      </div>
+    <div id="question-container">
+      <h2 id="question"></h2>
+      <ul id="choices"></ul>
+    </div>
 
-      <div id="game-over-container">
-        <h2>Quiz Over!</h2>
-        <p>Your Score: <span id="score"></span></p>
-        <form id="score-form">
-          <label for="initials">Enter Initials:</label>
-          <input type="text" id="initials" maxlength="3" required>
-          <button type="submit">Save Score</button>
-        </form>
-      </div>
+    <div id="game-over-container">
+      <h2>Game Over!</h2>
+      <form id="score-form">
+        <label for="initials">Enter your initials:</label>
+        <input type="text" id="initials" maxlength="3" required>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
 
-      <div id="high-scores-container">
-        <h2>High Scores</h2>
-        <ul id="high-scores-list"></ul>
-      </div>
-    </main>
-  </div>
+    <div id="high-scores-container">
+      <h2>High Scores</h2>
+      <ul id="high-scores-list"></ul>
+    </div>
+  </main>
 
   <script src="assets/js/script.js"></script>
 </body>
+
 </html>
