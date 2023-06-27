@@ -11,7 +11,6 @@
 <body>
   <div class="container">
     <h1>Quiz Game</h1>
-
     <div id="start-container">
       <button id="start-btn">Start Quiz</button>
     </div>
@@ -21,24 +20,27 @@
       <ul id="choices"></ul>
     </div>
 
-    <div id="feedback-container" class="hide">
-      <p id="feedback"></p>
+    <div id="game-over-container" class="hide">
+      <h2>Game Over!</h2>
+      <h3>Your Final Score: <span id="final-score"></span></h3>
+      <form id="score-form">
+        <label for="initials">Enter your initials:</label>
+        <input type="text" id="initials" name="initials" maxlength="3">
+        <button type="submit">Submit</button>
+      </form>
     </div>
 
-    <div id="game-over-container" class="hide">
-        <h2>Game Over!</h2>
-        <form id="score-form">
-          <label for="initials">Enter your initials:</label>
-          <input type="text" id="initials" name="initials" maxlength="3">
-          <button type="submit">Submit</button>
-        </form>
-      </div>
-      
-      <div id="high-scores-container" class="hide">
-        <h2>High Scores</h2>
-        <ul id="high-scores-list"></ul>
-      </div>
+    <div id="high-scores-container" class="hide">
+      <h2>High Scores</h2>
+      <ul id="high-scores-list"></ul>
     </div>
+
+    <div id="message" class="hide"></div>
+
+    <div id="timer-container">
+      <h3>Time Left: <span id="time-left"></span></h3>
+    </div>
+  </div>
 
   <script src="assets/js/script.js"></script>
 </body>
