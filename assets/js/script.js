@@ -199,8 +199,15 @@ function showHighScores() {
     // Display the high scores on the screen
     highScoresContainer.innerHTML = highScoresHTML;
   }
-  
 
+  var goBackBtn = document.getElementById("go-back-btn");
+goBackBtn.addEventListener("click", function() {
+  // Hide the high scores container and show the start container
+  highScoresContainer.classList.add("hide");
+  startContainer.classList.remove("hide");
+});
+
+  
 function hideElement(element) {
   element.classList.add("hide");
 }
