@@ -2,6 +2,8 @@
 
 This is a web-based coding quiz game built with HTML, CSS, and JavaScript. The game presents a series of coding-related questions to the player, with a timer counting down. The player must select the correct answer within the time limit. At the end of the quiz, the player can save their initials and score to compare with other players' high scores.
 
+![Quiz Screenshot](image.png)
+
 ## Features
 
 - Multiple-choice questions related to coding
