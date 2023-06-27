@@ -178,6 +178,29 @@ function showMessage(message) {
   }, 1000);
 }
 
+function showHighScores() {
+    // Get the high scores from local storage
+    var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+  
+    // Sort the high scores in descending order based on score
+    highScores.sort(function(a, b) {
+      return b.score - a.score;
+    });
+  
+    // Create an HTML string to display the high scores
+    var highScoresHTML = "<h2>High Scores</h2>";
+  
+    // Loop through each high score and add it to the HTML string
+    for (var i = 0; i < highScores.length; i++) {
+      var scoreEntry = highScores[i];
+      highScoresHTML += "<p>" + scoreEntry.initials + " - " + scoreEntry.score + "</p>";
+    }
+  
+    // Display the high scores on the screen
+    highScoresContainer.innerHTML = highScoresHTML;
+  }
+  
+
 function hideElement(element) {
   element.classList.add("hide");
 }
